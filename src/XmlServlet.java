@@ -33,9 +33,15 @@ public class XmlServlet extends HttpServlet {
 		String userfirst = request.getParameter("userfirst");
 		String userlast = request.getParameter("userlast");
 		String Prof = request.getParameter("Prof");
-		String loc = request.getParameter("location");
+		//String loc = request.getParameter("location");
+		
+		String[] loc = request.getParameterValues("location");
 		pw.println("Welcome! from POST method " + userfirst + " " + userlast + " You are a " + Prof);
-		pw.println("You live in: " + loc);
+		pw.println("You live in: " + loc.length + " places");
+		
+		for(int i=0; i<loc.length;i++) {
+			pw.println(loc[i]);
+		}
 		
 	}
 
