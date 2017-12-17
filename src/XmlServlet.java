@@ -19,8 +19,19 @@ public class XmlServlet extends HttpServlet {
 		
 		//pw.println("Response from XML Servlet!");
 		System.out.println("XML response rendered!");
-		String params = request.getParameter("username");
-		pw.println("Welcome! " + params);
+		String user = request.getParameter("username");
+		pw.println("Welcome! from GET method " + user);
+		
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+		
+		//pw.println("Response from XML Servlet!");
+		System.out.println("XML response rendered!");
+		String user = request.getParameter("username");
+		pw.println("Welcome! from POST method " + user);
 		
 	}
 
