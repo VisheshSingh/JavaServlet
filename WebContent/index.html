@@ -8,8 +8,16 @@
 	<h1>Hello!</h1>
 	
 	<form action="xmlservletpath" method="post">
-		Enter your firstname: <input type="text" name="userfirst"><br/>
+		Enter your firstname: <input type="text" name="userfirst">
 		Enter your lastname: <input type="text" name="userlast"><br/>
+		Profession: 
+		<input type="radio" name="Prof" value="Developer">Developer
+		<input type="radio" name="Prof" value="Administrator">Administrator <br/>
+		Location: 
+		<select name="location">
+			<option value="New York">New York</option>
+			<option value="California">California</option>
+		</select> <br/>
 		<input type="submit" value="submit">
 	</form>
 </body>

@@ -32,7 +32,10 @@ public class XmlServlet extends HttpServlet {
 		System.out.println("XML response rendered!");
 		String userfirst = request.getParameter("userfirst");
 		String userlast = request.getParameter("userlast");
-		pw.println("Welcome! from POST method " + userfirst + " " + userlast);
+		String Prof = request.getParameter("Prof");
+		String loc = request.getParameter("location");
+		pw.println("Welcome! from POST method " + userfirst + " " + userlast + " You are a " + Prof);
+		pw.println("You live in: " + loc);
 		
 	}
 
