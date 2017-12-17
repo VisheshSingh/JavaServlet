@@ -17,8 +17,10 @@ public class XmlServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 		
-		pw.println("Response from XML Servlet!");
+		//pw.println("Response from XML Servlet!");
 		System.out.println("XML response rendered!");
+		String params = request.getParameter("username");
+		pw.println("Welcome! " + params);
 		
 	}
 
