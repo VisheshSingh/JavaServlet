@@ -30,8 +30,9 @@ public class XmlServlet extends HttpServlet {
 		
 		//pw.println("Response from XML Servlet!");
 		System.out.println("XML response rendered!");
-		String user = request.getParameter("username");
-		pw.println("Welcome! from POST method " + user);
+		String userfirst = request.getParameter("userfirst");
+		String userlast = request.getParameter("userlast");
+		pw.println("Welcome! from POST method " + userfirst + " " + userlast);
 		
 	}
 
